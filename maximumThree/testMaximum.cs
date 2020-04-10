@@ -19,26 +19,31 @@ namespace maximumThree
             output=testMaximum(data1,data2,data3);
         }
     
-        static public T testMaximum(T data1,T data2, T data3)
+         public T testMaximum(T data1, T data2, T data3)
         {
 
             if (data1.CompareTo(data2) >0 && data1.CompareTo(data3) > 0)
             {
-                return data1;
+                return printMaximum(data1);
             }
             else if (data2.CompareTo(data1) > 0 && data2.CompareTo(data3) > 0)
             {
-                return data2;
+                return printMaximum(data2);
             }
             else
             {
-                return data3;
+                return printMaximum(data3);
             }
         }
-
+        public T printMaximum(T max)
+        {
+            Console.WriteLine("max value = "+max);
+            return max;
+        }
         public int CompareTo(object obj)
         {
             throw new NotImplementedException();
         }
+
     }
 }
