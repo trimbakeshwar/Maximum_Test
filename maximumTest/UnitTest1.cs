@@ -18,9 +18,8 @@ namespace Tests
             int number1 = 5;
             int number2 = 10;
             int number3 = 6;
-            MaximumTest<int> test = new MaximumTest<int>();
-            int output = test.checkMax(number1, number2, number3);
-            Assert.AreEqual(output, expected);
+            MaximumTest<int> test = new MaximumTest<int>(number1, number2, number3);
+            Assert.AreEqual(test.output, expected);
 
         }
         [Test]
@@ -30,9 +29,8 @@ namespace Tests
             float number1 = 5.25f;
             float number2 = 6.25f;
             float number3 = 6.75f;
-            MaximumTest<float> test = new MaximumTest<float>();
-            float output = test.checkMax(number1, number2, number3);
-            Assert.AreEqual(output, expected);
+            MaximumTest<float> test = new MaximumTest<float>(number1, number2, number3); 
+            Assert.AreEqual(test.output, expected);
 
         }
         [Test]
@@ -42,9 +40,8 @@ namespace Tests
             string string1 ="amar";
             string string2 = "akbar";
             string string3 = "anthani";
-            MaximumTest<string>test = new MaximumTest<string>();
-            string output = test.checkMax(string1, string2, string3);
-            Assert.AreEqual(output, expected);
+            MaximumTest<string>test = new MaximumTest<string>(string1, string2, string3);
+            Assert.AreEqual(test.output, expected);
 
         }
     }

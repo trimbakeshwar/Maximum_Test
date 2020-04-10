@@ -6,9 +6,20 @@ namespace maximumThree
 {
     public class MaximumTest<T> where T: IComparable
     {
-        
+        public T output;
+        private T data1;
+        private T data2;
+        private T data3;
+       
+        public MaximumTest(T value1,T value2,T value3)
+        {
+            data1 = value1;
+            data2 = value2;
+            data3 = value3;
+            output=testMaximum(data1,data2,data3);
+        }
     
-        public T checkMax(T data1, T data2, T data3)
+        static public T testMaximum(T data1,T data2, T data3)
         {
 
             if (data1.CompareTo(data2) >0 && data1.CompareTo(data3) > 0)
