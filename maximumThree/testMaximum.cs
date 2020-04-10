@@ -4,55 +4,30 @@ using System.Text;
 
 namespace maximumThree
 {
-    public class MaximumTest
+    public class MaximumTest<T> where T: IComparable
     {
-        public int checkMaxForInteger(int number1,int number2,int number3)
-        {
-            
-            if(number1>number2 && number1>number3)
-            {
-                return number1;
-            }
-            else if(number2>number1 && number2>number3)
-            {
-                return number2;
-            }
-            else
-            {
-                return number3;
-            }
-        }
-        public float checkMaxForFloat(float number1, float number2, float number3)
+        
+    
+        public T checkMax(T data1, T data2, T data3)
         {
 
-            if (number1 > number2 && number1 > number3)
+            if (data1.CompareTo(data2) >0 && data1.CompareTo(data3) > 0)
             {
-                return number1;
+                return data1;
             }
-            else if (number2 > number1 && number2 > number3)
+            else if (data2.CompareTo(data1) > 0 && data2.CompareTo(data3) > 0)
             {
-                return number2;
+                return data2;
             }
             else
             {
-                return number3;
+                return data3;
             }
         }
-        public string checkMaxForString(string string1, string string2, string string3)
-        {
 
-            if (string1.CompareTo(string2)>0 && string1.CompareTo(string3) > 0)
-            {
-                return string1;
-            }
-            else if (string2.CompareTo(string1) > 0 && string2.CompareTo(string3) > 0)
-            {
-                return string2;
-            }
-            else
-            {
-                return string3;
-            }
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }
