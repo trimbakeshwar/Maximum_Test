@@ -33,5 +33,16 @@ namespace Tests
             Assert.AreEqual(output, expected);
 
         }
+        [Test]
+        public void maxTestForString()
+        {
+            string expected = "akbar";
+            string string1 ="amar";
+            string string2 = "akbar";
+            string string3 = "anthani";
+            string output = test.checkMaxForString(string1, string2, string3);
+            Assert.AreEqual(output, expected);
+
+        }
     }
 }
