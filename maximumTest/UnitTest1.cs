@@ -22,5 +22,16 @@ namespace Tests
             Assert.AreEqual(output, expected);
 
         }
+        [Test]
+        public void maxTestForFloat()
+        {
+            float expected = 6.75f;
+            float number1 = 5.25f;
+            float number2 = 6.25f;
+            float number3 = 6.75f;
+            float output = test.checkMaxForFloat(number1, number2, number3);
+            Assert.AreEqual(output, expected);
+
+        }
     }
 }
