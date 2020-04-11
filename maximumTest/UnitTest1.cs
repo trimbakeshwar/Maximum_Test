@@ -10,7 +10,9 @@ namespace Tests
         public void Setup()
         {
         }
-
+        /// <summary>
+        /// check for integer
+        /// </summary>
         [Test]
         public void maxTestForInteger()
         {
@@ -22,6 +24,9 @@ namespace Tests
             Assert.AreEqual(test.output, expected);
 
         }
+        /// <summary>
+        /// test for float value
+        /// </summary>
         [Test]
         public void maxTestForFloat()
         {
@@ -33,6 +38,9 @@ namespace Tests
             Assert.AreEqual(test.output, expected);
 
         }
+        /// <summary>
+        /// check for string 
+        /// </summary>
         [Test]
         public void maxTestForString()
         {
