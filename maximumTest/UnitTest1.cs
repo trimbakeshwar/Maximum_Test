@@ -17,10 +17,10 @@ namespace Tests
         public void maxTestForInteger()
         {
             int expected = 10;
-            int number1 = 5;
-            int number2 = 10;
-            int number3 = 6;
-            MaximumTest<int> test = new MaximumTest<int>(number1, number2, number3);
+            int numberOne = 5;
+            int numberTwo = 10;
+            int numberThree= 6;
+            MaximumTest<int> test = new MaximumTest<int>(numberOne, numberTwo, numberThree);
             Assert.AreEqual(test.output, expected);
 
         }
@@ -31,10 +31,10 @@ namespace Tests
         public void maxTestForFloat()
         {
             float expected = 6.75f;
-            float number1 = 5.25f;
-            float number2 = 6.25f;
-            float number3 = 6.75f;
-            MaximumTest<float> test = new MaximumTest<float>(number1, number2, number3); 
+            float numberOne = 5.25f;
+            float numberTwo = 6.2f;
+            float numberThree = 6.75f;
+            MaximumTest<float> test = new MaximumTest<float>(numberOne, numberTwo, numberThree); 
             Assert.AreEqual(test.output, expected);
 
         }
@@ -45,12 +45,13 @@ namespace Tests
         public void maxTestForString()
         {
             string expected = "anthani";
-            string string1 ="amar";
-            string string2 = "akbar";
-            string string3 = "anthani";
-            MaximumTest<string>test = new MaximumTest<string>(string1, string2, string3);
+            string stringOne ="amar";
+            string stringTwo = "akbar";
+            string stringThree = "anthani";
+            MaximumTest<string>test = new MaximumTest<string>(stringOne, stringTwo, stringThree);
             Assert.AreEqual(test.output, expected);
 
         }
+       
     }
 }

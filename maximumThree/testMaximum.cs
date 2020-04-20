@@ -9,10 +9,11 @@ namespace maximumThree
 /// <typeparam name="T"> int,float,string</typeparam>
     public class MaximumTest<T> where T: IComparable
     {
+        //attributes
         public T output;
-        private T data1;
-        private T data2;
-        private T data3;
+        private T valueOne;
+        private T valueTwo;
+        private T valueThree;
        /// <summary>
        /// constructor for assign value
        /// and call to testmaximum for find max value
@@ -20,41 +21,45 @@ namespace maximumThree
        /// <param name="value1"></param>
        /// <param name="value2"></param>
        /// <param name="value3"></param>
-        public MaximumTest(T value1,T value2,T value3)
+       
+        public MaximumTest(T valueOne, T valueTwo, T valueThree)
         {
-            data1 = value1;
-            data2 = value2;
-            data3 = value3;
-            output=testMaximum(data1,data2,data3);
+            this.valueOne = valueOne;
+            this.valueTwo = valueTwo;
+            this.valueThree = valueThree;
+            //cll to test max
+            output=testMaximum(valueOne, valueTwo, valueThree);
         }
     /// <summary>
     /// compare three value together and return max value
     /// </summary>
-    /// <param name="data1"></param>
-    /// <param name="data2"></param>
-    /// <param name="data3"></param>
+    /// <param name="dataOne"></param>
+    /// <param name="dataTwo"></param>
+    /// <param name="dataThree"></param>
     /// <returns>max value</returns>
-         public T testMaximum(T data1, T data2, T data3)
+         public T testMaximum(T valueOne, T valueTwo, T valueThree)
         {
-
-            if (data1.CompareTo(data2) >0 && data1.CompareTo(data3) > 0)
+            //compare one value with other 2 and call maximum value
+            if (valueOne.CompareTo(valueTwo) >0 && valueOne.CompareTo(valueThree) > 0)
             {
-                return printMaximum(data1);
+                //call to printmax method and print max value and return maxx value
+                return printMaximum(valueOne);
             }
-            else if (data2.CompareTo(data1) > 0 && data2.CompareTo(data3) > 0)
+            //compare one value with other 2 and call maximum value
+            else if (valueTwo.CompareTo(valueOne) > 0 && valueTwo.CompareTo(valueThree) > 0)
             {
-                return printMaximum(data2);
+                return printMaximum(valueTwo);
             }
             else
             {
-                return printMaximum(data3);
+                return printMaximum(valueThree);
             }
         }
 
-        public T printMaximum(T max)
+        public T printMaximum(T maximum)
         {
-            Console.WriteLine("max value = "+max);
-            return max;
+            Console.WriteLine("max value = "+ maximum);
+            return maximum;
         }
         public int CompareTo(object obj)
         {
